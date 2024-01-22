@@ -1,0 +1,20 @@
+Person Class
+class Person {
+  private name: string;
+  private age: number;
+  private gender: string;
+
+  constructor(name: string, age: number, gender: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+
+  getDetails(): string {
+    return `Name: ${this.name}, Age: ${this.age}, Gender: ${this.gender}`;
+  }
+}
+
+// Example usage:
+const person = new Person("John Doe", 25, "Male");
+console.log(person.getDetails());
