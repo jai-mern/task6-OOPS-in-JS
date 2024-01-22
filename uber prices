@@ -1,0 +1,24 @@
+UberPriceCalculator Class:
+class UberPriceCalculator {
+  private baseFare: number;
+  private distance: number;
+  private time: number;
+
+  constructor(baseFare: number, distance: number, time: number) {
+    this.baseFare = baseFare;
+    this.distance = distance;
+    this.time = time;
+  }
+
+  calculatePrice(): number {
+    // Assume a simple pricing formula for demonstration purposes
+    const distanceCost = 2 * this.distance;
+    const timeCost = 0.5 * this.time;
+    return this.baseFare + distanceCost + timeCost;
+  }
+}
+
+// Example usage:
+const uberCalculator = new UberPriceCalculator(5, 10, 20);
+const totalPrice = uberCalculator.calculatePrice();
+console.log(`Total Uber Price: $${totalPrice}`);
